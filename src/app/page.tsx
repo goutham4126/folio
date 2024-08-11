@@ -34,7 +34,7 @@ function App() {
       ) : (
         <div className="flex justify-center items-center h-screen">
           <img 
-            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*i1yv42RrOYhvw7U2MM4qCg.gif" 
+            src="https://cdn.dribbble.com/users/66340/screenshots/3089041/spinner2.gif" 
             alt="Loading..." 
             className="w-full h-full object-cover" 
           />
