@@ -14,7 +14,7 @@ function Contact() {
       {show && (
         <>
           <div className="fixed inset-0 bg-black/60 z-20" onClick={toggleModal}></div>
-          <div className="fixed inset-0 flex items-center justify-end mr-3 z-30 md:mb-12">
+          <div className="fixed inset-0 flex items-center justify-end  mx-3 z-30 md:mb-12">
             <Mail/>
           </div>
         </>
@@ -23,7 +23,7 @@ function Contact() {
         onClick={toggleModal} 
         className="fixed right-4 bottom-4 bg-indigo-500 p-2 rounded-full shadow-lg z-40"
       >
-        <IoChatbubbleEllipses className="h-6 w-6 text-white" />
+        <IoChatbubbleEllipses className="h-8 w-8 text-white" />
       </button>
     </div>
   );

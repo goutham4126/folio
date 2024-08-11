@@ -65,7 +65,7 @@ function Home() {
           <br />
           various programming languages and technologies.
         </p>
-        <span className="flex m-auto md:m-0 cursor-pointer my-4" onClick={handleDownloadClick}>
+        <span className="flex m-auto -mb-10 md:mb-0 cursor-pointer mt-4" onClick={handleDownloadClick}>
           <span className="flex items-center gap-3 bg-indigo-500 text-white rounded-xl px-4 py-3 shadow-lg hover:bg-indigo-600 transition">
             Download CV <FaCloudDownloadAlt className="h-5 w-5" />
           </span>

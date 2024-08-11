@@ -17,7 +17,7 @@
     };
 
     return (
-      <form onSubmit={handleSubmit(onSubmit)} className="flex justify-end bg-stone-200 rounded-lg md:w-[28vw]">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex justify-end bg-stone-200 rounded-lg w-full md:w-[28vw]">
         <Toaster position="top-center" reverseOrder={false} />
         <div className="flex flex-col p-6 w-full">
           <h1 className="text-center text-xl font-bold text-indigo-500 mb-2">Mail me for collaboration</h1>
