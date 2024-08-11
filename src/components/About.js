@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 
 function About() {
   return (
-    <div className="text-gray-600 bg-white">
+    <div className="text-gray-600 bg-white px-5 sm:px-0">
       <div className="container py-12 mx-auto flex flex-wrap">
         {/* Skills Section */}
         <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">

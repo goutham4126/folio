@@ -14,7 +14,7 @@ function Contact() {
       {show && (
         <>
           <div className="fixed inset-0 bg-black/60 z-20" onClick={toggleModal}></div>
-          <div className="fixed inset-0 flex items-center justify-end mr-3 z-30 mb-12">
+          <div className="fixed inset-0 flex items-center justify-end mr-3 z-30 md:mb-12">
             <Mail/>
           </div>
         </>
