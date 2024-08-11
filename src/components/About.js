@@ -37,7 +37,7 @@ function About() {
             <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
              <h2 className="font-bold text-gray-900 mb-1 text-lg">Professional Experience</h2>
               <p className="text-gray-400">
-                Over 2 years of experience working with various teams and projects in hackathons. 
+                Over 2 years of experience collaborating and working with various teams and projects in hackathons. 
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ function About() {
             <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                 <h2 className="font-bold text-gray-900 mb-1 text-lg">Achievements</h2>
                 <p className="text-gray-400">
-                 Winners at krithoathon 2024,Consolation price at GDSC solutions.
+                 Winner at krithoathon 2024,Consolation price at GDSC solution challenge.
                </p>
             </div>
           </div>
