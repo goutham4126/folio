@@ -1,9 +1,7 @@
 "use client";
 import Navbar from "@/components/navbar";
 import { useState, useEffect } from "react";
-import Contact from "@/components/Contact";
 import Home from "@/components/Home";
-import Skills from "./skills/page";
 import About from "@/components/About";
 import Projects from "./projects/page";
 import Footer from "@/components/Footer";
@@ -25,9 +23,7 @@ function App() {
         <>
           <Navbar />
           <div id="home"><Home /></div>
-          <div id="contact"><Contact /></div>
           <div id="projects"><Projects /></div>
-          <div id="skills"><Skills /></div>
           <div id="about"><About /></div>
           <Footer />
         </>

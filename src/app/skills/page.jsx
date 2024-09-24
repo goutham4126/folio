@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 function Skills() {
   const skills = [
@@ -8,10 +15,9 @@ function Skills() {
     { name: 'React', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
     { name: 'TypeScript', imageUrl: 'https://www.svgrepo.com/show/374144/typescript.svg' },
     { name: 'Tailwind CSS', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' },
-    { name: 'Bootstrap', imageUrl: 'https://dh.virginia.edu/system/files/styles/large/private/bootstrap-stack.png?itok=b_S8F9nO' },
+    { name: 'Bootstrap', imageUrl: 'https://d3mxt5v3yxgcsr.cloudfront.net/courses/17101/course_17101_image.jpg' },
     { name: 'Next.js', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg' },
     { name: 'Node.js', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
-    { name: 'PostgreSQL', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJiLi1XmTTdTIwS8R876hTxZIzUr0sOkjU8nn6UEvg-HE6cqT5tgGJQxHwP3kXqolEBaU&usqp=CAU' },
     { name: 'MySQL', imageUrl: 'https://pbs.twimg.com/profile_images/1255113654049128448/J5Yt92WW_400x400.png' },
     { name: 'MongoDB', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg' },
     { name: 'Prisma', imageUrl: 'https://yt3.googleusercontent.com/1oQc-j55vr_tnNhIWvSTxSPeV9cPpZyC3IoTr4zl6oUvEK50z9PjtfvKfyL8qC-sNbcQQmYg=s900-c-k-c0x00ffffff-no-rj' },
@@ -26,20 +32,31 @@ function Skills() {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-8">
-      <h1 className="text-3xl font-bold my-6 text-slate-500 bg-gradient-to-r from-slate-300 via-slate-400 to-slate-500 bg-clip-text text-transparent shadow-lg tracking-wider">My Technical Arsenal</h1>
-      <div className="flex flex-wrap justify-center gap-6 sm:gap-8 sm:p-6 m-4">
-        {skills.map((skill) => (
-          <div key={skill.name} className="flex flex-col items-center">
-            <img
-              src={skill.imageUrl}
-              alt={skill.name}
-              className="w-16 h-16 sm:w-24 sm:h-24 rounded-full border-4 sm:border-8 border-slate-500 p-1 sm:p-2 bg-white"
-            />
-            <p className="mt-2 text-xs sm:text-sm font-medium text-stone-400">{skill.name}</p>
-          </div>
-        ))}
-      </div>
+    <div className="flex flex-col items-center mb-12 md:px-0 px-12">
+      <Carousel
+        opts={{
+          align: "start",
+          gap: "10px",
+        }}
+        className="w-full max-w-5xl"
+      >
+        <CarouselContent>
+          {skills.map((skill, index) => (
+            <CarouselItem key={index} className="flex justify-center md:basis-1/6">
+                <div className="flex flex-col items-center mx-10 md:mx-0 md:p-4">
+                  <img
+                    src={skill.imageUrl}
+                    alt={skill.name}
+                    className="w-24 h-24 rounded-full border-4 sm:border-8 border-slate-500 p-1 sm:p-2 bg-white"
+                  />
+                  <p className="mt-2 text-xs sm:text-sm font-medium text-stone-400 text-center">{skill.name}</p>
+                </div>
+            </CarouselItem> 
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="bg-black text-white" />
+        <CarouselNext className="bg-black text-white" />
+      </Carousel>
     </div>
   );
 }

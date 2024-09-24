@@ -1,85 +1,81 @@
 import { MdLocationOn, MdWork, MdStar } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 function About() {
   return (
-    <div className="text-gray-600 bg-white px-5 sm:px-0">
-      <div className="container py-12 mx-auto flex flex-wrap">
-        {/* Skills Section */}
-        <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-          <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
-          <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <FaCode className="w-10 h-10" />
+    <div className="text-gray-600 bg-white px-5 sm:px-8">
+      <div className="container py-12 mx-auto flex flex-col space-y-5">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <Card className="flex flex-col p-6 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center mb-4">
+              <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <FaCode className="w-10 h-10" />
+              </div>
+              <div className="ml-4">
+                <h2 className="font-bold text-gray-900 text-lg">Skills</h2>
+                <ul className="text-gray-400 list-disc list-inside">
+                  <li>Proficient in Next.js, React.js, React Native, Tailwind CSS</li>
+                  <li>Experience with Node.js, MongoDB, JavaScript</li>
+                  <li>Programming Languages: C, C++, Python, SQL</li>
+                </ul>
+              </div>
             </div>
-            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 className="font-bold text-gray-900 mb-1 text-lg">Skills</h2>
-              <p className="text-gray-400">
-                Experienced in modern web development with proficiency in frontend and backend technologies. 
-              </p>
+          </Card>
+          <Card className="flex flex-col p-6 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center mb-4">
+              <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <MdWork className="w-10 h-10" />
+              </div>
+              <div className="ml-4">
+                <h2 className="font-bold text-gray-900 text-lg">Professional Experience</h2>
+                <ul className="text-gray-400 list-disc list-inside">
+                  <li>MERN Stack Mentor, mentoring over 50 students</li>
+                  <li>
+                    Frontend Developer at Tutly, 
+                    <Link href="https://www.tutly.in" className="text-blue-500 hover:underline"> www.tutly.in</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </Card>
         </div>
 
-        {/* Experiences Section */}
-        <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-          <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
-          <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <MdWork className="w-10 h-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <Card className="flex flex-col p-6 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center mb-4">
+              <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <MdStar className="w-10 h-10" />
+              </div>
+              <div className="ml-4">
+                <h2 className="font-bold text-gray-900 text-lg">Achievements</h2>
+                <ul className="text-gray-400 list-disc list-inside">
+                  <li>Winner of Krithoathon 2.0 Hackathon</li>
+                  <li>Consolation prize at Google Solution Challenge</li>
+                  <li>Finalist in Octcoder Contest</li>
+                </ul>
+              </div>
             </div>
-            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-             <h2 className="font-bold text-gray-900 mb-1 text-lg">Professional Experience</h2>
-              <p className="text-gray-400">
-                Over 2 years of experience collaborating and working with various teams and projects in hackathons. 
-              </p>
+          </Card>
+          <Card className="flex flex-col p-6 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center mb-4">
+              <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <MdLocationOn className="w-10 h-10" />
+              </div>
+              <div className="ml-4">
+                <h2 className="font-bold text-gray-900 text-lg">Contact</h2>
+                <ul className="text-gray-400 list-disc list-inside">
+                  <li>Email: <span className="text-gray-500">goutham4126@gmail.com</span></li>
+                  <li>Phone: <span className="text-gray-500">+91 9160804126</span></li>
+                  <li>Location: <span className="text-gray-500">Hyderabad, India</span></li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </Card>
         </div>
 
-        {/* Achievements Section */}
-        <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-          <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
-          <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <MdStar className="w-10 h-10" />
-            </div>
-            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                <h2 className="font-bold text-gray-900 mb-1 text-lg">Achievements</h2>
-                <p className="text-gray-400">
-                 Winner at krithoathon 2024,Consolation price at GDSC solution challenge.
-               </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="flex relative pb-3 sm:items-center md:w-2/3 mx-auto">
-          <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
-          <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div className="flex-shrink-0 w-20 h-20 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <MdLocationOn className="w-10 h-10" />
-            </div>
-            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-             <h2 className="font-bold text-gray-900 mb-1 text-lg">Contact</h2>
-              <p className="text-gray-400">
-                Feel free to reach out for any collaborations or inquiries. You can contact me via :<span className="text-gray-500"> goutham4126@gmail.com</span>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
