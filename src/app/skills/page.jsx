@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useRef } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -6,12 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
 
 function Skills() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  const autoplayRef = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+
   const skills = [
     { name: 'HTML', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThv_Eln478MbyScNgvUEwHe8E4c_o6KUMFHg&s' },
     { name: 'CSS', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFRkTTDrLQr_SMM_z4EUh3OL7EBItUoATnMw&s' },
@@ -43,22 +44,22 @@ function Skills() {
           gap: "10px",
         }}
         className="w-full max-w-5xl"
-        plugins={[plugin.current]}
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
+        plugins={[autoplayRef.current]}
+        onMouseEnter={autoplayRef.current.stop}
+        onMouseLeave={autoplayRef.current.reset}
       >
         <CarouselContent>
           {skills.map((skill, index) => (
             <CarouselItem key={index} className="flex justify-center md:basis-1/6">
-                <div className="flex flex-col items-center mx-10 md:mx-0 md:p-4">
-                  <img
-                    src={skill.imageUrl}
-                    alt={skill.name}
-                    className="w-24 h-24 rounded-full border-4 sm:border-8 border-slate-500 p-1 sm:p-2 bg-white"
-                  />
-                  <p className="mt-2 text-xs sm:text-sm font-medium text-stone-400 text-center">{skill.name}</p>
-                </div>
-            </CarouselItem> 
+              <div className="flex flex-col items-center mx-10 md:mx-0 md:p-4">
+                <img
+                  src={skill.imageUrl}
+                  alt={skill.name}
+                  className="w-24 h-24 rounded-full border-4 sm:border-8 border-slate-500 p-1 sm:p-2 bg-white"
+                />
+                <p className="mt-2 text-xs sm:text-sm font-medium text-stone-400 text-center">{skill.name}</p>
+              </div>
+            </CarouselItem>
           ))}
         </CarouselContent>
         <CarouselPrevious className="bg-black text-white" />
