@@ -63,7 +63,7 @@ function Home() {
         <p className="text-xs md:text-sm text-zinc-400 mt-2 font-bold">
           Web developer and competitive programmer
         </p>
-        <span className="flex justify-center md:justify-start -mb-10 md:mb-0 cursor-pointer mt-4" onClick={handleDownloadClick}>     
+        <span className="flex justify-center md:justify-start -mb-4 md:mb-0 cursor-pointer mt-4" onClick={handleDownloadClick}>     
           <Button variant="outline" className="text-black">Download CV <FaCloudDownloadAlt className="h-5 w-5 ml-3"/> </Button>
         </span>
       </div>
