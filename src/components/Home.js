@@ -21,37 +21,39 @@ function Home() {
   };
 
   return (
-  <div className="p-6 mb-10">
+  <div className="p-6 mb-8">
     <Skills/>
     <div className="flex flex-col md:flex-row justify-center md:justify-evenly items-center">
-      <div className="relative flex md:hidden justify-center my-10">
-        <div className="relative">
-          <div className="absolute -top-12 md:-top-24 left-1/2 transform -translate-x-2/4">
-            <GiQueenCrown className="text-yellow-400 w-20 h-20 md:w-28 md:h-28 animate-pulse" />
-          </div>
-          <div className="p-2 mt-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-            <img src="https://i.postimg.cc/T1L5ws3B/Me.jpg" alt="Goutham" className="rounded-full shadow-lg w-40 h-40 md:w-64 md:h-64 object-cover" />
+      <div className="flex flex-row gap-10">
+        <div className="flex flex-col items-center bg-zinc-800 px-4 py-5 md:px-5 md:py-10 rounded-md md:rounded-full gap-8">
+          <Link href="https://drive.google.com/file/d/1U12VjnNGDXUpHhPfsv9e1daIC6rP1gl1/view?usp=sharing">
+            <FaFileAlt className="h-6 w-6 md:h-8 md:w-8 hover:text-gray-300 text-white" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/p-goutham-6a49292a6/">
+            <ImLinkedin className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
+          </Link>
+          <Link href="https://github.com/goutham4126">
+            <FiGithub className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
+          </Link>
+          <Link href="https://discordapp.com/users/1210127934908661841">
+            <TbBrandDiscord className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
+          </Link>
+          <Link href="https://leetcode.com/u/goutham4126/">
+            <SiLeetcode  className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
+          </Link>
+        </div>
+        <div className="flex md:hidden justify-center mt-16">
+          <div className="relative">
+            <div className="absolute -top-12 left-1/2 transform -translate-x-2/4">
+              <GiQueenCrown className="text-yellow-400 w-20 h-20 animate-pulse" />
+            </div>
+            <div className="p-2 mt-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              <img src="https://i.postimg.cc/T1L5ws3B/Me.jpg" alt="Goutham" className="rounded-full shadow-lg w-40 h-40 object-cover" />
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-row md:flex-col items-center bg-zinc-800 px-5 py-3 md:py-10 rounded-full gap-6 sm:gap-12 lg:gap-8">
-        <Link href="https://drive.google.com/file/d/1U12VjnNGDXUpHhPfsv9e1daIC6rP1gl1/view?usp=sharing">
-          <FaFileAlt className="h-6 w-6 md:h-8 md:w-8 hover:text-gray-300 text-white" />
-        </Link>
-        <Link href="https://www.linkedin.com/in/p-goutham-6a49292a6/">
-          <ImLinkedin className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
-        </Link>
-        <Link href="https://github.com/goutham4126">
-          <FiGithub className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
-        </Link>
-        <Link href="https://discordapp.com/users/1210127934908661841">
-          <TbBrandDiscord className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
-        </Link>
-        <Link href="https://leetcode.com/u/goutham4126/">
-          <SiLeetcode  className="h-6 w-6 md:h-7 md:w-7 hover:text-gray-300 text-white" />
-        </Link>
-      </div>
-      <div className="flex flex-col justify-center text-center md:text-left mt-5">
+      <div className="flex flex-col justify-center text-center md:text-left mt-10 md:mt-5">
         <h1 className="text-3xl md:text-5xl font-bold">
           Hello peeps 👋,
         </h1>
@@ -65,7 +67,7 @@ function Home() {
           <Button variant="outline" className="text-black">Download CV <FaCloudDownloadAlt className="h-5 w-5 ml-3"/> </Button>
         </span>
       </div>
-      <div className="relative hidden md:flex mt-10">
+      <div className="relative hidden md:flex mt-20">
         <div className="relative">
           <div className="absolute -top-12 md:-top-24 left-1/2 transform -translate-x-2/4">
             <GiQueenCrown className="text-yellow-400 w-20 h-20 md:w-28 md:h-28 animate-pulse" />
