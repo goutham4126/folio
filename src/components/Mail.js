@@ -1,15 +1,8 @@
-"use client"
+"use client";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 import { Button } from "@/components/ui/button";
-import {
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogFooter,
-  AlertDialogCancel,
-} from "@/components/ui/alert-dialog";
 
 function MailForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -17,19 +10,20 @@ function MailForm() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post('/api/mail', data);
-      toast.success(response.data.message);
       reset();
+      toast.success(response.data.message);
     } catch (error) {
       toast.error(`Error: ${error.response?.data?.error || error.message}`);
     }
   };
 
+  const clearForm = () => {
+    reset();
+  };
+
   return (
-    <AlertDialogContent>
-      <AlertDialogHeader>
-        <AlertDialogTitle>Mail me for collaborative team work</AlertDialogTitle>
-      </AlertDialogHeader>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full">
+    <div className="bg-white p-6 rounded-md shadow-lg w-full">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
         <div className="relative mb-4">
           <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
           <input
@@ -45,12 +39,12 @@ function MailForm() {
           <input
             type="email"
             id="email"
-            {...register("email", { 
+            {...register("email", {
               required: "Email is required",
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                message: "Invalid email address"
-              }
+                message: "Invalid email address",
+              },
             })}
             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
@@ -65,12 +59,13 @@ function MailForm() {
           ></textarea>
           {errors.message && <p className="text-red-500 text-xs italic">{errors.message.message}</p>}
         </div>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <Button type="submit" className="text-sm font-semibold bg-zinc-700 px-8 py-3">Submit</Button>
-        </AlertDialogFooter>
+        <div className="flex justify-between items-center">
+          <Button type="button" onClick={clearForm} className="text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 px-4 py-2">Cancel</Button>
+          <Button type="submit" className="text-sm font-semibold bg-zinc-700 px-4 py-2">Submit</Button>
+        </div>
       </form>
-    </AlertDialogContent>
+      <Toaster position="top-center" reverseOrder={false} />
+    </div>
   );
 }
 

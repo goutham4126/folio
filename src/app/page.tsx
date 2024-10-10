@@ -2,8 +2,9 @@
 import Navbar from "@/components/navbar";
 import { useState, useEffect } from "react";
 import Home from "@/components/Home";
-import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Projects from "./projects/page";
+import Skills from './skills/page';
 import Footer from "@/components/Footer";
 
 function App() {
@@ -18,13 +19,14 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col" style={{ fontFamily: "Open Sans, sans-serif" }}>
+    <div className="flex flex-col">
       {showHomePage ? (
         <>
           <Navbar />
           <div id="home"><Home /></div>
+          <div id="skills"><Skills/></div>
           <div id="projects"><Projects /></div>
-          <div id="about"><About /></div>
+          <div id="contact"><Contact /></div>
           <Footer />
         </>
       ) : (

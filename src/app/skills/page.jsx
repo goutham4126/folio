@@ -55,7 +55,7 @@ function Skills() {
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
-                  className="w-24 h-24 rounded-full border-4 sm:border-8 border-slate-500 p-1 sm:p-2 bg-white"
+                  className="w-24 h-24 rounded-full border-4 sm:border-8 p-1 sm:p-2 bg-white"
                 />
                 <p className="mt-2 text-xs sm:text-sm font-medium text-stone-400 text-center">{skill.name}</p>
               </div>
