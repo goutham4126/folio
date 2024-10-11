@@ -26,12 +26,12 @@ function Navbar() {
           }
           {open && (
             <nav className="flex flex-col gap-3 absolute left-0 top-12 z-40 w-full bg-zinc-900 inset-0 text-white p-4">
-              <Link href="#home" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2.5 px-5">Home</Link>
-              <Link href="#projects" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Projects</Link>
-              <Link href="#skills" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Skills</Link>
-              <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Contact</Link>
-              <Link href="#about" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">About</Link>
-              <Link href="#education" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Education</Link>
+              <Link href="#home" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2.5 px-5">Home</Link>
+              <Link href="#projects" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Projects</Link>
+              <Link href="#skills" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Skills</Link>
+              <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Contact</Link>
+              <Link href="#about" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">About</Link>
+              <Link href="#education" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Education</Link>
             </nav>
           )}
         </div>
