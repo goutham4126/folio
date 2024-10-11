@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import Projects from "./projects/page";
 import Skills from './skills/page';
 import Footer from "@/components/Footer";
+import Timeline from "@/components/Timeline"
 
 function App() {
   const [showHomePage, setShowHomePage] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <div id="home"><Home /></div>
           <div id="skills"><Skills/></div>
           <div id="projects"><Projects /></div>
+          <div><Timeline/></div>
           <div id="contact"><Contact /></div>
           <Footer />
         </>
