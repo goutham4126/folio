@@ -22,7 +22,7 @@ function Home() {
 
   return (
     <div className="flex flex-col md:flex-row justify-center md:justify-evenly items-center p-3 mb-8">
-      <div className="flex md:flex-col flex-row items-center bg-zinc-800 px-4 py-5 md:px-5 md:py-10 rounded-lg md:rounded-full gap-8 md:gap-12">
+      <div className="flex md:flex-col flex-row items-center bg-zinc-800 py-5 px-5 mt-4 md:py-10 rounded-full gap-8 md:gap-12">
         <Link
           href="https://drive.google.com/file/d/1U12VjnNGDXUpHhPfsv9e1daIC6rP1gl1/view?usp=sharing"
           className="hover:text-gray-300 text-white"
@@ -78,7 +78,7 @@ function Home() {
           <Button className="bg-indigo-500 text-white rounded-md"><Link href="#contact" className="flex">Contact <MdEmail className="h-5 w-5 ml-3"/></Link></Button>  
         </span>
       </div>
-      <div className="md:w-[40vw] mt-5 md:mt-0 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
+      <div className="md:w-[40vw] mx-4 mt-5 md:mt-0 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
             <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
