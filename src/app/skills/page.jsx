@@ -37,7 +37,7 @@ function Skills() {
   ];
 
   return (
-    <div className="flex flex-col items-center mb-12 md:px-0 px-12">
+    <div className="flex flex-col items-center mb-12 md:px-0 px-16">
       <Carousel
         opts={{
           align: "start",
