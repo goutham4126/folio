@@ -30,6 +30,8 @@ function Navbar() {
               <Link href="#projects" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Projects</Link>
               <Link href="#skills" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Skills</Link>
               <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Contact</Link>
+              <Link href="#about" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">About</Link>
+              <Link href="#education" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 bg-slate-700 rounded-xl py-2 px-4">Education</Link>
             </nav>
           )}
         </div>

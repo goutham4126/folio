@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Home from "@/components/Home";
 import Contact from "@/components/Contact";
 import Projects from "./projects/page";
+import About from "@/components/About"
 import Skills from './skills/page';
 import Footer from "@/components/Footer";
 import Timeline from "@/components/Timeline"
@@ -25,9 +26,10 @@ function App() {
         <>
           <Navbar />
           <div id="home"><Home /></div>
-          <div id="skills"><Skills/></div>
+          {/* <div id="skills"><Skills/></div> */}
+          <div id="about"><About /></div>
           <div id="projects"><Projects /></div>
-          <div><Timeline/></div>
+          <div id="education"><Timeline/></div>
           <div id="contact"><Contact /></div>
           <Footer />
         </>
