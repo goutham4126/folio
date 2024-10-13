@@ -13,6 +13,14 @@ function Projects() {
       githubLink: "https://github.com/GoodKodersUnV/LMS-VNRVJIET",
     },
     {
+      title: "💸 Cashio",
+      description:
+        "Cashio is a user-friendly expense tracker website designed to help individuals manage their finances effectively. With features like detailed income and expense tracking, it provides insightful visualizations, including donut chart, enabling users to make informed financial decisions and enhance budgeting skills",
+      imageUrl: "https://i.postimg.cc/v8tnL4H9/Screenshot-2024-10-13-160021.png",
+      liveLink: "https://cashio.vercel.app/",
+      githubLink: "https://github.com/goutham4126/cashio",
+    },
+    {
       title: "🚀 StudySphere",
       description:
         "Developed an AI-powered interactive quizzing platform that facilitates seamless quiz generation from various topics or PDFs. The platform offers diverse modes, enables quiz sharing, tracks leaderboards, supports peer collaboration, and includes token refilling for a scalable and engaging learning experience.",
