@@ -61,7 +61,7 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-white rounded-lg shadow-lg p-4"
+            className="flex flex-col items-center bg-white rounded shadow-lg p-4"
           >
             <img
               src={project.imageUrl}

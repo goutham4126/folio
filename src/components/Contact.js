@@ -11,7 +11,7 @@ function Contact() {
           {["Collaborative teamwork", "Effective communication", "Team management", "Leadership", "Problem solving", "Quick Learner"].map((skill, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 p-4 rounded-lg text-center text-white font-medium shadow-md hover:scale-105 transform transition-all duration-300 ease-out"
+              className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 p-4 rounded text-center text-white font-medium shadow-md hover:scale-105 transform transition-all duration-300 ease-out"
             >
               {skill}
             </div>

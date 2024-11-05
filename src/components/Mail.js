@@ -22,7 +22,7 @@ function MailForm() {
   };
 
   return (
-    <div className="bg-white p-6 rounded-md shadow-lg w-full">
+    <div className="bg-white p-6 rounded-xl shadow-lg w-full">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
         <div className="relative mb-4">
           <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>

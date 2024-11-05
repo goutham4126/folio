@@ -37,7 +37,7 @@ function Timeline() {
         Education
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center mx-4 gap-6">
-        <div className="relative flex flex-col gap-6 p-8 bg-white rounded-lg shadow-lg w-full max-w-4xl">
+        <div className="relative flex flex-col gap-6 p-8 bg-white rounded-xl shadow-lg w-full max-w-4xl">
           <div className="w-full">
             <iframe
               width="100%"

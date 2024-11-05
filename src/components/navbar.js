@@ -9,11 +9,11 @@ function Navbar() {
   return (
     <div>
       <div className="hidden sm:flex flex-row justify-center p-4 mx-5">
-          <nav className="font-medium text-sm flex gap-4 md:gap-10 p-4 rounded-md bg-slate-500 px-5">
-            <Link href="#home" className="hover:text-white">Home</Link>
-            <Link href="#projects" className="hover:text-white">Projects</Link>
-            <Link href="#skills" className="hover:text-white">Skills</Link>
-            <Link href="#contact" className="hover:text-white">Contact</Link> 
+          <nav className="font-medium text-sm flex gap-4 md:gap-10 p-4 rounded-xl bg-slate-200 text-gray-800 px-5">
+            <Link href="#home" className="hover:text-slate-500">Home</Link>
+            <Link href="#projects" className="hover:text-slate-500">Projects</Link>
+            <Link href="#skills" className="hover:text-slate-500">Skills</Link>
+            <Link href="#contact" className="hover:text-slate-500">Contact</Link> 
           </nav>
       </div>
       <div className="sm:hidden flex justify-between items-center p-4 bg-slate-200 text-black md:text-white md:bg-black">

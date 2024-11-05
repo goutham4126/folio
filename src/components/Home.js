@@ -74,11 +74,11 @@ function Home() {
           repeat={Infinity}
         />
         <span className="flex justify-center md:justify-start  mt-4 gap-5">
-          <Button className="bg-indigo-500 text-white rounded-md" onClick={handleDownloadClick}>Download CV <FaCloudDownloadAlt className="h-4.5 w-4.5 ml-3"/> </Button>
-          <Button className="bg-indigo-500 text-white rounded-md"><Link href="#contact" className="flex">Contact <MdEmail className="h-5 w-5 ml-3"/></Link></Button>  
+          <Button className="bg-indigo-500 text-white rounded-xl" onClick={handleDownloadClick}>Download CV <FaCloudDownloadAlt className="h-4.5 w-4.5 ml-3"/> </Button>
+          <Button className="bg-indigo-500 text-white rounded-xl"><Link href="#contact" className="flex">Contact <MdEmail className="h-5 w-5 ml-3"/></Link></Button>  
         </span>
       </div>
-      <div className="md:w-[40vw] mx-4 mt-5 md:mt-0 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
+      <div className="md:w-[40vw] mx-4 mt-5 md:mt-0 from-[#0d1224] border-[#1b2c68a0] relative rounded-xl border bg-gradient-to-r to-[#0a0d37]">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
             <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
