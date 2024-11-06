@@ -6,7 +6,7 @@ function Navbar() {
           <strong className="font-semibold mr-4">
             All information presented here is accurate to the best of my knowledge.
           </strong>{" "}
-          If you’d like to connect or learn more, feel free to reach out !
+          If you&apos;d like to connect or learn more, feel free to reach out !
         </p>
         <p>
           <a
