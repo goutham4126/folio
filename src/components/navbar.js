@@ -1,42 +1,23 @@
-"use client";
-import Link from "next/link";
-import { IoMenu } from "react-icons/io5";
-import { useState } from "react";
-import { RxCross2 } from "react-icons/rx";
-
 function Navbar() {
-  const [open, setOpen] = useState(false);
   return (
-    <div>
-      <div className="hidden sm:flex flex-row justify-center p-4 mx-5">
-          <nav className="font-medium text-sm flex gap-4 md:gap-10 p-4 rounded-xl bg-slate-200 text-gray-800 px-5">
-            <Link href="#home" className="hover:text-slate-500">Home</Link>
-            <Link href="#projects" className="hover:text-slate-500">Projects</Link>
-            <Link href="#skills" className="hover:text-slate-500">Skills</Link>
-            <Link href="#contact" className="hover:text-slate-500">Contact</Link> 
-          </nav>
+    <marquee className="relative bg-gray-50 px-6 py-2.5 sm:px-3.5 z-50">
+      <div className="flex flex-row items-center gap-x-4">
+        <p className="text-sm text-gray-900">
+          <strong className="font-semibold mr-4">
+            All information presented here is accurate to the best of my knowledge.
+          </strong>{" "}
+          If you’d like to connect or learn more, feel free to reach out !
+        </p>
+        <p>
+          <a
+            href="mailto:goutham4126@gmail.com"
+            className="flex-none rounded-full bg-gray-900 px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          >
+            Contact Me <span aria-hidden="true">&rarr;</span>
+          </a>
+        </p>
       </div>
-      <div className="sm:hidden flex justify-between items-center p-4 bg-slate-200 text-black md:text-white md:bg-black">
-        <div className="flex items-center">
-          {
-            open ?
-            <RxCross2 className="h-6 w-6 cursor-pointer" onClick={() => setOpen(false)}/>:
-            <IoMenu className="h-6 w-6 cursor-pointer"
-              onClick={() => setOpen(true)}/>
-          }
-          {open && (
-            <nav className="flex flex-col gap-3 absolute left-0 top-12 z-40 w-full bg-zinc-900 inset-0 text-white p-4">
-              <Link href="#home" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2.5 px-5">Home</Link>
-              <Link href="#projects" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Projects</Link>
-              <Link href="#skills" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Skills</Link>
-              <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Contact</Link>
-              <Link href="#about" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">About</Link>
-              <Link href="#education" onClick={() => setOpen(false)} className="hover:text-gray-300 m-1 rounded-xl py-2 px-4">Education</Link>
-            </nav>
-          )}
-        </div>
-      </div>
-    </div>
+    </marquee>
   );
 }
 

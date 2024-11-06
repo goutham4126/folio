@@ -1,6 +1,6 @@
 import { MdOutlineAccessTime } from "react-icons/md";
 
-function Timeline() {
+function Education() {
   const education = [
     {
       institution: "VNR VJIET, Hyderabad",
@@ -32,8 +32,8 @@ function Timeline() {
   const mapSrc = `https://www.google.com/maps/embed/v1/directions?key=${googleMapKey}&origin=${userLocation.latitude},${userLocation.longitude}&destination=${encodeURIComponent(destination)}`;
 
   return (
-    <div className="md:my-12 my-5">
-      <h1 className="text-xl md:text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600 font-semibold mb-4">
+    <div className="md:my-8 my-5">
+      <h1 className="text-xl md:text-3xl text-center text-slate-300 font-semibold mb-4">
         Education
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center mx-4 gap-6">
@@ -73,4 +73,4 @@ function Timeline() {
   );
 }
 
-export default Timeline;
+export default Education;

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/Curser"
-
+import Footer from "@/components/Footer"
+import Navbar from "@/components/navbar"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,9 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className="bg-black text-white min-h-screen bg-cover bg-center bg-fixed cursor-none">
-          <CustomCursor/>
+      <div className="bg-black text-white min-h-screen">
+          <Navbar/>
           {children}
+          <Footer/>
         </div>
       </body>
     </html>

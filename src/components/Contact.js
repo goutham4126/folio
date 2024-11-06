@@ -2,8 +2,8 @@ import MailForm from "./Mail";
 
 function Contact() {
   return (
-    <div className="p-6 rounded-lg shadow-lg">
-      <h1 className="text-xl md:text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600 font-semibold mb-4">
+    <div className="p-4 rounded-lg shadow-lg">
+      <h1 className="text-xl md:text-3xl text-center text-slate-300 font-semibold mb-6">
         Contact me
       </h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
@@ -11,7 +11,7 @@ function Contact() {
           {["Collaborative teamwork", "Effective communication", "Team management", "Leadership", "Problem solving", "Quick Learner"].map((skill, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 p-4 rounded text-center text-white font-medium shadow-md hover:scale-105 transform transition-all duration-300 ease-out"
+              className="bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 p-4 rounded text-center text-white font-medium shadow-md hover:scale-105 transform transition-all duration-300 ease-out"
             >
               {skill}
             </div>

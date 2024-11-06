@@ -61,7 +61,7 @@ function MailForm() {
         </div>
         <div className="flex justify-between items-center">
           <Button type="button" onClick={clearForm} className="text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 px-4 py-2">Cancel</Button>
-          <Button type="submit" className="text-sm font-semibold bg-zinc-700 px-4 py-2">Submit</Button>
+          <Button type="submit" className="text-sm font-semibold bg-zinc-700 hover:bg-zinc-800 px-4 py-2">Submit</Button>
         </div>
       </form>
       <Toaster position="top-center" reverseOrder={false} />
