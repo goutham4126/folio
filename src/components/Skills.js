@@ -34,7 +34,7 @@ export default function Skills() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1E1E1E] p-6 md:p-10 relative">
+    <div className="bg-[#1E1E1E] p-6 md:p-10 relative">
      <div className="absolute inset-0 z-0 hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 opacity-20">
 
         <motion.div className="flex items-center justify-center p-4 bg-transparent absolute bottom-10 left-10 sm:bottom-20 sm:left-15 md:bottom-40 md:left-25">
