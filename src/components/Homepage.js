@@ -153,13 +153,13 @@ export default function Homepage() {
                       <span className="text-pink-500">const</span> <span className="text-white">developer</span> <span className="text-pink-500">=</span> <span className="text-gray-400">{'{'}</span>
                     </motion.div>
                     <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
-                      <span className="text-white">name:</span> <span className="text-amber-300">'Goutham'</span><span className="text-gray-400">,</span>
+                      <span className="text-white">name:</span> <span className="text-amber-300">&apos;Goutham&apos;</span><span className="text-gray-400">,</span>
                     </motion.div>
                     <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
                       <span className="text-white">skills:</span> <span className="text-gray-400">[</span>
                       {skills.map((skill, index) => (
                         <span key={skill}>
-                          <span className="text-amber-300">'{skill}'</span>
+                          <span className="text-amber-300">&apos;{skill}&apos;</span>
                           {index < skills.length - 1 && <span className="text-gray-400">, </span>}
                         </span>
                       ))}
