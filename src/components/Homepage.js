@@ -21,7 +21,7 @@ export default function Homepage() {
   const toggleLamp = () => setIsLampOn(!isLampOn)
 
   const skills = [
-    'React', 'NextJS', 'Tailwind CSS', 'Express', 'Bootstrap', 'MongoDB',
+    'React', 'NextJS', 'Tailwind CSS', 'Prisma', 'Bootstrap', 'MongoDB',
     'MySql', 'C', 'C++', 'Python', 'Material UI', 'Shadcn UI'
   ]
 
@@ -99,7 +99,7 @@ export default function Homepage() {
         </div>
 
         <motion.div 
-          className="flex items-center justify-center lg:justify-start space-x-4 lg:space-x-6 bg-gray-800 bg-opacity-50 py-3 px-6 lg:py-4 lg:px-8 rounded-full"
+          className="flex items-center space-x-6 lg:space-x-8 bg-gray-800 bg-opacity-50 py-5 px-8 rounded-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -128,7 +128,7 @@ export default function Homepage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full md:w-[400px] mb-10 lg:mb-0"
+        className="w-full md:w-[500px] mb-5"
       >
         <div className="bg-gradient-to-r from-[#0d1224] to-[#0a0d37] border border-[#1b2c68a0] rounded-xl overflow-hidden shadow-2xl">
           <div className="flex flex-row">
@@ -154,6 +154,12 @@ export default function Homepage() {
                     </motion.div>
                     <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
                       <span className="text-white">name:</span> <span className="text-amber-300">&apos;Goutham&apos;</span><span className="text-gray-400">,</span>
+                    </motion.div>
+                    <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
+                      <span className="text-white">location:</span> <span className="text-amber-300">&apos;Hyderabad&apos;</span><span className="text-gray-400">,</span>
+                    </motion.div>
+                    <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
+                      <span className="text-white">dob:</span> <span className="text-amber-300">&apos;09-02-2005&apos;</span><span className="text-gray-400">,</span>
                     </motion.div>
                     <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="ml-4">
                       <span className="text-white">skills:</span> <span className="text-gray-400">[</span>

@@ -1,28 +1,34 @@
-import MailForm from "./Mail";
 
-function Contact() {
+import Mail from "@/components/Mail"
+
+const Contact = () => {
+
+  const experience = [
+    { company: "Tutly", duration: "2023-present", role: "Co-founder" },
+    { company: "ElevateBox", duration: "2024-present", role: "Full Stack Developer" },
+    { company: "MERN Stack Development", duration: "2023-2024", role: "Mentor" },
+  ];
+
   return (
-    <div className="p-4 rounded-lg shadow-lg">
-      <h1 className="text-xl md:text-3xl text-center text-slate-300 font-semibold mb-6">
-        Contact me
-      </h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-        <div className="flex flex-col gap-4 md:gap-6 w-full md:w-1/3">
-          {["Collaborative teamwork", "Effective communication", "Team management", "Leadership", "Problem solving", "Quick Learner"].map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 p-4 rounded text-center text-white font-medium shadow-md hover:scale-105 transform transition-all duration-300 ease-out"
-            >
-              {skill}
+    <div className="bg-gray-900 text-white p-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 className="text-3xl font-bold text-yellow-500 mb-6">Experience</h2>
+          {experience.map((item, index) => (
+            <div key={index} className="bg-gray-800 p-4 mb-4 rounded-md shadow-md">
+              <h3 className="text-xl md:mb-2 font-semibold">{item.company}</h3>
+              <p className="text-yellow-500 md:mb-2">{item.duration}</p>
+              <p>{item.role}</p>
             </div>
           ))}
         </div>
-        <div className="w-full md:w-1/3">
-          <MailForm />
+        <div>
+          <h2 className="text-3xl font-bold text-yellow-500 mb-6">Contact</h2>
+          <Mail/>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
