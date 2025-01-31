@@ -22,7 +22,7 @@ function MailForm() {
   };
 
   return (
-    <div className="bg-gray-800 p-6 shadow-lg w-full text-white">
+    <div className="bg-gray-800 p-6 shadow-lg w-full text-white rounded">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
         <div className="relative mb-4">
           <label htmlFor="name" className="leading-7 text-sm text-yellow-500">Name</label>
@@ -63,13 +63,13 @@ function MailForm() {
           <Button
             type="button"
             onClick={clearForm}
-            className="text-sm font-semibold bg-gray-600 hover:bg-gray-700 text-white px-4 py-2"
+            className="text-sm font-semibold bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded"
           >
             Cancel
           </Button>
           <Button
             type="submit"
-            className="text-sm font-semibold bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2"
+            className="text-sm font-semibold bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded"
           >
             Submit
           </Button>

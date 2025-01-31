@@ -29,7 +29,7 @@ export default function App() {
   ]
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5 lg:gap-20 lg:flex-row min-h-screen p-6 bg-slate-900 text-white" style={{fontFamily:"Lexend Giga"}}>
+    <div className="flex flex-col items-center justify-center gap-5 lg:gap-20 lg:flex-row text-white mt-12 md:mt-5" style={{fontFamily:"Lexend Giga"}}>
       <div className="hidden lg:flex flex-col items-center justify-center space-y-10 p-4 rounded-full backdrop-blur-md bg-gray-600 bg-opacity-30 shadow-lg">
             {[
               { href: "https://drive.google.com/file/d/1ixYHtSbNKf6CN4tSwTX0uO4Lj2-NaVtR/view?usp=drive_link", icon: FaFileAlt, label: "Resume" },
@@ -44,7 +44,7 @@ export default function App() {
             ))}
       </div>
       <div className="flex flex-col items-center space-y-6 lg:space-y-8">
-      <div className="relative flex flex-col items-center justify-center mt-10 md:mt-5">
+      <div className="relative flex flex-col items-center justify-center">
           <div onClick={toggleLamp} className="cursor-pointer flex items-center">
             <div className="relative flex flex-col items-center justify-center">
               <div

@@ -82,7 +82,7 @@ function Education() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-6 text-yellow-400">Education Timeline</h2>
+            <h2 className="text-2xl font-bold mb-6 text-yellow-400">Education</h2>
             <div className="space-y-8">
               {education.map((edu, index) => (
                 <motion.div
