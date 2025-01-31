@@ -1,5 +1,5 @@
 
-import Mail from "@/components/Mail"
+import Mail from "../../components/Mail"
 
 const Contact = () => {
 
