@@ -26,7 +26,7 @@ export default function RootLayout({
             </div>
             <div className="flex items-center justify-between px-6 py-4">
               <Routes/>
-              <div>
+              <div className="hidden lg:flex">
                   <a
                     href="mailto:goutham4126@gmail.com"
                     className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
