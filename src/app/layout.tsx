@@ -36,7 +36,9 @@ export default function RootLayout({
               </div>
             </div>
             <div>
+                <div className="h-screen">
                 {children}
+                </div>
                 <Footer/>
             </div>
           </div>
