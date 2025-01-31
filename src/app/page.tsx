@@ -8,7 +8,8 @@ import { FiGithub } from "react-icons/fi"
 import { TbBrandDiscord } from "react-icons/tb"
 import { SiLeetcode } from "react-icons/si"
 import Link from "next/link"
-
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import {Badge} from "@/components/ui/badge"
 export default function App() {
   const [isLampOn, setIsLampOn] = useState(true)
   const toggleLamp = () => setIsLampOn(!isLampOn)
@@ -28,27 +29,43 @@ export default function App() {
     "Shadcn UI",
   ]
 
+
+  const socialLinks = [
+    {
+      href: "https://drive.google.com/file/d/1ixYHtSbNKf6CN4tSwTX0uO4Lj2-NaVtR/view?usp=drive_link",
+      icon: FaFileAlt,
+      label: "Resume",
+    },
+    { href: "https://www.linkedin.com/in/p-goutham-6a49292a6/", icon: ImLinkedin, label: "LinkedIn" },
+    { href: "https://github.com/goutham4126", icon: FiGithub, label: "GitHub" },
+    { href: "https://discordapp.com/users/1210127934908661841", icon: TbBrandDiscord, label: "Discord" },
+    { href: "https://leetcode.com/u/goutham4126/", icon: SiLeetcode, label: "LeetCode" },
+  ]
+
   return (
-    <div className="flex flex-col items-center justify-center gap-5 lg:gap-20 lg:flex-row text-white mt-12 md:mt-5" style={{fontFamily:"Lexend Giga"}}>
-      <div className="hidden lg:flex flex-col items-center justify-center space-y-10 p-4 rounded-full backdrop-blur-md bg-gray-600 bg-opacity-30 shadow-lg">
-            {[
-              { href: "https://drive.google.com/file/d/1ixYHtSbNKf6CN4tSwTX0uO4Lj2-NaVtR/view?usp=drive_link", icon: FaFileAlt, label: "Resume" },
-              { href: "https://www.linkedin.com/in/p-goutham-6a49292a6/", icon: ImLinkedin, label: "LinkedIn" },
-              { href: "https://github.com/goutham4126", icon: FiGithub, label: "GitHub" },
-              { href: "https://discordapp.com/users/1210127934908661841", icon: TbBrandDiscord, label: "Discord" },
-              { href: "https://leetcode.com/u/goutham4126/", icon: SiLeetcode, label: "LeetCode" },
-            ].map((item, index) => (
-              <Link key={index} href={item.href} aria-label={item.label} target="_blank" rel="noopener noreferrer">
-                <item.icon className="h-6 w-6 lg:h-7 lg:w-7 text-gray-300 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.7)]" />
+    <div className="flex flex-col items-center justify-center gap-5 lg:gap-32 lg:flex-row text-white mt-12 md:mt-5" style={{fontFamily:"Lexend Giga"}}>
+      <div className="hidden lg:flex flex-col items-center justify-center space-y-10 px-4 py-10 rounded-full backdrop-blur-md bg-gray-600 bg-opacity-30 shadow-lg">
+      <TooltipProvider>
+        {socialLinks.map((item, index) => (
+          <Tooltip key={index}>
+            <TooltipTrigger asChild>
+              <Link href={item.href} aria-label={item.label} target="_blank" rel="noopener noreferrer">
+                <item.icon className="h-9 w-9 text-gray-300 hover:text-slate-200" />
               </Link>
-            ))}
-      </div>
+            </TooltipTrigger>
+            <TooltipContent className="border-none">
+              <Badge variant="secondary" className="absolute left-10 bottom-2 px-2 py-1 bg-slate-600 text-xs">{item.label}</Badge>
+            </TooltipContent>
+          </Tooltip>
+        ))}
+      </TooltipProvider>
+    </div>
       <div className="flex flex-col items-center space-y-6 lg:space-y-8">
       <div className="relative flex flex-col items-center justify-center">
           <div onClick={toggleLamp} className="cursor-pointer flex items-center">
             <div className="relative flex flex-col items-center justify-center">
               <div
-                className={`absolute top-[-30px] w-20 h-10 ${
+                className={`absolute top-[-30px] w-20 h-20 ${
                   isLampOn ? "bg-yellow-400 shadow-lg shadow-yellow-300" : "bg-gray-500"
                 } rounded-full transition-all duration-300 transform`}
                 style={{ transformOrigin: "center bottom" }}

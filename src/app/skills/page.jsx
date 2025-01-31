@@ -31,11 +31,10 @@ export default function Skills() {
   ]
 
   return (
-    <div className="bg-slate-900 p-6 relative">
+    <div className="bg-slate-900 relative">
       <div className="max-w-6xl mx-auto space-y-4 relative z-10">
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-2">My Skills</h2>
-          <p className="text-gray-400 my-4 text-base font-semibold">Here are the technologies and tools I work with</p>
+          <p className="text-gray-400 my-4 text-base font-semibold md:text-xl md:pb-4">Here are the technologies and tools I work with</p>
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {skillCategories.map((skill, index) => (
