@@ -12,10 +12,12 @@ const Routes = () => {
     { path: "/projects", name: "Projects", color: "bg-green-500" },
     { path: "/education", name: "Education", color: "bg-blue-500" },
     { path: "/experience", name: "Experience", color: "bg-violet-500" },
+    { path: "/about", name: "About me", color: "bg-orange-500" },
+    { path: "/achievements", name: "Achievements", color: "bg-cyan-500" },
   ]
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-3 md:space-x-4">
       {routes.map((route) => (
         <Link href={route.path} key={route.path} className="flex items-center space-x-2">
           <div className={`h-3 w-3 rounded-full ${route.color}`}></div>

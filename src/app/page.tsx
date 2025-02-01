@@ -61,22 +61,12 @@ export default function App() {
       </TooltipProvider>
     </div>
       <div className="flex flex-col items-center space-y-6 lg:space-y-8">
-      <div className="relative flex flex-col items-center justify-center">
-          <div onClick={toggleLamp} className="cursor-pointer flex items-center">
-            <div className="relative flex flex-col items-center justify-center">
-              <div
-                className={`absolute top-[-30px] w-20 h-20 ${
-                  isLampOn ? "bg-yellow-400 shadow-lg shadow-yellow-300" : "bg-gray-500"
-                } rounded-full transition-all duration-300 transform`}
-                style={{ transformOrigin: "center bottom" }}
-              ></div>
-            </div>
-          </div>
+      <div className="flex flex-col items-center justify-center" onClick={toggleLamp}>
           <img
             src="https://i.postimg.cc/T1L5ws3B/Me.jpg"
             alt="Goutham"
-            className={`w-48 h-48 lg:w-64 lg:h-64 rounded-full transition-all duration-500 ${
-              isLampOn ? "brightness-100 shadow-lg shadow-gray-50" : "brightness-50"
+            className={`w-48 h-48 lg:w-72 lg:h-72 rounded-full transition-all duration-500 ${
+              isLampOn ? "brightness-100 shadow-lg shadow-gray-50" : "brightness-75"
             }`}
           />
         </div>

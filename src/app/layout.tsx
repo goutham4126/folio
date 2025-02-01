@@ -20,24 +20,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full">
+        <div className="w-full cursor-pointer">
           <div className="bg-gradient-to-r from-[#0d1224] to-[#0a0d37] border border-[#1b2c68a0] overflow-hidden shadow-2xl">
-            <div className="flex flex-row">
-              <div className="h-[2px] w-full bg-gradient-to-r from-violet-600 via-slate-500 to-violet-600"></div>
-            </div>
-            <div className="flex items-center justify-between px-6 py-4">
-              <Routes/>
-              <div className="hidden lg:flex">
-                  <a
-                    href="mailto:goutham4126@gmail.com"
-                    className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
-                  >
-                    Contact Me <span aria-hidden="true" className="ml-2">&rarr;</span>
-                  </a>
+            <div className="fixed z-50 w-full">
+              <div className="flex flex-row">
+                <div className="h-[2px] w-full bg-gradient-to-r from-violet-600 via-slate-500 to-violet-600"></div>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gradient-to-r from-[#0d1224] to-[#0a0d37]">
+                <Routes/>
+                <div>
+                    <a
+                      href="mailto:goutham4126@gmail.com"
+                    >
+                      <img src="https://avatars.githubusercontent.com/u/155656523?v=4" alt="Goutham" className="w-10 h-10 rounded-full border-2 border-slate-400"/>
+                    </a>
+                </div>
               </div>
             </div>
             <div>
-                <div className="h-full">
+                <div className="h-full mt-16">
                 {children}
                 </div>
                 <Work/>

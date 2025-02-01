@@ -1,6 +1,9 @@
 "use client"
+import { useState } from "react"
 
 export default function Skills() {
+  const [hoveredSkill, setHoveredSkill] = useState(null)
+
   const skillCategories = [
     { name: "Tailwind CSS", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
     { name: "Bootstrap", imageUrl: "https://d3mxt5v3yxgcsr.cloudfront.net/courses/17101/course_17101_image.jpg" },
@@ -31,18 +34,27 @@ export default function Skills() {
   ]
 
   return (
-    <div className="bg-slate-900 relative">
+    <div className="bg-slate-900 relative py-6">
       <div className="max-w-6xl mx-auto space-y-4 relative z-10">
         <div className="text-center">
-          <p className="text-gray-400 my-4 text-base font-semibold md:text-xl md:pb-4">Here are the technologies and tools I work with</p>
+          <p className="text-gray-400 my-4 text-base font-semibold md:text-xl md:pb-4">
+            Here are the technologies and tools I work with
+          </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {skillCategories.map((skill, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-xl shadow-lg h-36 w-36 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105"
+              className="bg-white p-4 rounded-xl shadow-lg h-32 w-36 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105 relative"
+              onMouseEnter={() => setHoveredSkill(skill.name)}
+              onMouseLeave={() => setHoveredSkill(null)}
             >
-              <img src={skill.imageUrl || "/placeholder.svg"} alt={skill.name} className="w-24 h-24 object-contain" />
+              <img src={skill.imageUrl || "/placeholder.svg"} alt={skill.name} className="w-20 h-24 object-contain" />
+              {hoveredSkill === skill.name && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 rounded-xl">
+                  <span className="text-white text-sm font-semibold">{skill.name}</span>
+                </div>
+              )}
             </div>
           ))}
         </div>
