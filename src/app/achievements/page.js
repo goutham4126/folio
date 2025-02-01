@@ -11,13 +11,13 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-10">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2">
           {achievements.map((achieve, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105"
+              className="bg-gray-800 rounded-xl p-6 shadow-lg transform transition duration-300 hover:scale-105"
             >
               <div className="flex items-center gap-4">
                 <div className="flex-shrink-0">

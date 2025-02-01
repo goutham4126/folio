@@ -17,7 +17,7 @@ const Routes = () => {
   ]
 
   return (
-    <div className="flex space-x-3 md:space-x-4">
+    <div className="flex space-x-4">
       {routes.map((route) => (
         <Link href={route.path} key={route.path} className="flex items-center space-x-2">
           <div className={`h-3 w-3 rounded-full ${route.color}`}></div>
