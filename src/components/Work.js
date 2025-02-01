@@ -13,7 +13,7 @@ const Work = () => {
   ]
 
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
@@ -24,7 +24,7 @@ const Work = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 via-yellow-600 to-green-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-pink-400 to-violet-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <Button
                 variant="outline"
                 className="relative w-full h-full py-6 flex flex-col items-center justify-center space-y-4 bg-white hover:bg-gray-200 transition-colors duration-300 rounded-xl shadow-lg"

@@ -43,7 +43,7 @@ export default function App() {
   ]
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5 lg:gap-32 lg:flex-row text-white mt-12 md:mt-5" style={{fontFamily:"Lexend Giga"}}>
+    <div className="flex flex-col items-center justify-center gap-5 lg:gap-32 lg:flex-row text-white mt-24 md:mt-5" style={{fontFamily:"Lexend Giga"}}>
       <div className="hidden lg:flex flex-col items-center justify-center space-y-10 px-4 py-10 rounded-full backdrop-blur-md bg-gray-600 bg-opacity-30 shadow-lg">
       <TooltipProvider>
         {socialLinks.map((item, index) => (
