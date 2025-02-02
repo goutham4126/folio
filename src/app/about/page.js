@@ -9,7 +9,7 @@ export default function About() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="max-w-2xl text-center md:text-left space-y-4">
+        <div className="max-w-2xl space-y-4">
           <h1 className="text-4xl font-extrabold sm:text-5xl mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-move">
             P Goutham
           </h1>
