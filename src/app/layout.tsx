@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import Footer from "@/components/Footer"
-import Work from "@/components/Work"
 import Routes from "@/components/Routes"
 export const metadata: Metadata = {
   title: "Goutham | Portfolio",
@@ -41,7 +40,6 @@ export default function RootLayout({
                 <div className="h-full mt-16">
                 {children}
                 </div>
-                <Work/>
                 <Footer/>
             </div>
           </div>

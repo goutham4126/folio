@@ -1,8 +1,13 @@
-import React from 'react';
-import { MdLiveTv } from 'react-icons/md';
-import { RiGithubLine } from 'react-icons/ri';
+"use client"
+
+import { useState } from "react"
+import { MdLiveTv } from "react-icons/md"
+import { RiGithubLine } from "react-icons/ri"
+import { Button } from "@/components/ui/button"
 
 function Projects() {
+  const [showAll, setShowAll] = useState(false)
+
   const projects = [
     {
       title: "🌟 Tutly",
@@ -52,36 +57,28 @@ function Projects() {
       liveLink: "https://wixlan.vercel.app/",
       githubLink: "https://github.com/goutham4126/Wixlan",
     },
-  ];
+  ]
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 3)
 
   return (
     <div className="p-5 text-gray-800">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-white rounded-xl shadow-lg p-4"
-          >
+        {displayedProjects.map((project, index) => (
+          <div key={index} className="flex flex-col items-center bg-white rounded-xl shadow-lg p-4">
             <img
-              src={project.imageUrl}
+              src={project.imageUrl || "/placeholder.svg"}
               alt={`slide_image_${index + 1}`}
               className="h-48 w-full object-cover rounded-md mb-2"
             />
             <div>
               <h2 className="flex items-center gap-2 text-xl font-semibold my-3">
-                {project.title}{' '}
-                <a
-                  href={project.githubLink}
-                  className="text-gray-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                {project.title}{" "}
+                <a href={project.githubLink} className="text-gray-700" target="_blank" rel="noopener noreferrer">
                   <RiGithubLine className="h-6 w-6" />
                 </a>
               </h2>
-              <p className="text-gray-700 font-semibold text-justify mb-3 px-2">
-                {project.description}
-              </p>
+              <p className="text-gray-700 font-semibold text-justify mb-3 px-2">{project.description}</p>
               <div className="flex space-x-4">
                 <a
                   href={project.liveLink}
@@ -89,16 +86,23 @@ function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Go Live{' '}
-                  <MdLiveTv className="inline-block h-5 w-5 ml-1.5 mb-1.5" />
+                  Go Live <MdLiveTv className="inline-block h-5 w-5 ml-1.5 mb-1.5" />
                 </a>
               </div>
             </div>
           </div>
         ))}
       </div>
+      {!showAll && (
+        <div className="mt-8 text-center">
+          <Button onClick={() => setShowAll(true)} variant="secondary" className="text-white">
+            Show More ...
+          </Button>
+        </div>
+      )}
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
+

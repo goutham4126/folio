@@ -34,7 +34,7 @@ export default function Skills() {
   ]
 
   return (
-    <div className="bg-slate-900 relative py-6">
+    <div className="relative py-6">
       <div className="max-w-6xl mx-auto space-y-4 relative z-10">
         <div className="text-center">
           <p className="text-gray-400 my-4 text-base font-semibold md:text-xl md:pb-4">
