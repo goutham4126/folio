@@ -42,7 +42,7 @@ const Routes = () => {
   }
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-3 md:space-x-5">
       {routes.map((route) => (
         <button
           key={route.path}
@@ -51,7 +51,7 @@ const Routes = () => {
         >
           <div className={`h-3 w-3 rounded-full ${route.color}`}></div>
           {activeSection === route.path && (
-            <Badge variant="outline" className="text-slate-300 py-1 px-3 border-slate-600">
+            <Badge variant="outline" className="text-slate-300 border-slate-600">
               {route.name}
             </Badge>
           )}

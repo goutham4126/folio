@@ -63,6 +63,7 @@ function Projects() {
 
   return (
     <div className="p-5 text-gray-800">
+      <h2 className="text-3xl font-bold my-8 text-center text-yellow-400">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {displayedProjects.map((project, index) => (
           <div key={index} className="flex flex-col items-center bg-white rounded-xl shadow-lg p-4">
